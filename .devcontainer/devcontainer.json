@@ -1,0 +1,35 @@
+{
+    "name": "Essentials",
+    "image": "mcr.microsoft.com/devcontainers/typescript-node",
+    "features": {
+      "ghcr.io/devcontainers/features/node": "22.0.0",
+      "ghcr.io/devcontainers-contrib/features/zsh-plugins:0": {
+        "plugins": "git dirhistory ssh-agent npm zsh-autosuggestions",
+        "omzPlugins": "https://github.com/zsh-users/zsh-autosuggestions",
+        "username": "node"
+      }
+    },
+    "customizations": {
+      "vscode": {
+        "settings": {
+          "terminal.integrated.defaultProfile.linux": "zsh"
+        },
+        "extensions": [
+          "Angular.ng-template",
+          "Gruntfuggly.todo-tree",
+          "esbenp.prettier-vscode",
+          "EditorConfig.EditorConfig",
+          "waderyan.gitblame",
+          "GitLab.gitlab-workflow",
+          "dbaeumer.vscode-eslint",
+          "cyrilletuzi.angular-schematics",
+          "bradlc.vscode-tailwindcss",
+          "csstools.postcss"
+        ]
+      }
+    },
+    "postCreateCommand": "yarn install && npm install -g @angular/cli",
+    "runArgs": ["--net=host"]
+  }
+  
+  
